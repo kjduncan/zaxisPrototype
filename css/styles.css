@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8A8A8A;
+  padding: 0 16px;
+}
+nav h1 {
+  font-size: 32px;
+}
+nav p {
+  font-size: 24px;
+  color: #797979;
+  margin: 0;
+}
+nav p.small {
+  font-size: 16px;
+  margin: 0;
+}
+nav p.small span {
+    color: #2F8DFA;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  padding-left: 0;
+}
+
+nav ul li {
+  padding-right: 16px;
+}
+.share-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.share-group p {
+  color: #333;
+  padding: 0 12px;
+}
+nav .nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-right button {
+  margin-left: 16px;
+  background-color: #2F8DFA;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 8px 48px;
+  cursor: pointer;
+  border: none;
+}
+nav .nav-right button.add-contributor {
+  background-color: transparent;
+  border: none;
+  padding: 8px 0;
+}
+nav .nav-right ul li img {
+  width: 48px;
+}

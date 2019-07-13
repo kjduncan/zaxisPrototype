@@ -1,4 +1,4 @@
-/* 
+/*
  * Pivotl borrows heavily from the Foundation grid, with slight modifications.
  * Altered by @seanevd
 */
@@ -81,7 +81,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 80.5rem;
   *zoom: 1; }
   .row:before, .row:after {
     content: " ";

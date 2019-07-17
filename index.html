@@ -4,6 +4,7 @@
   <title>Title of the document</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/pivotl.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script>
     // TogetherJS configuration would go here, but we'll talk about that
     // later
@@ -32,7 +33,7 @@
             <div class="nav-right large-4">
               <ul>
                 <li>
-                  <button class="add-contributor"><img src="images/addButton.svg" alt=""></button>
+                  <button id="clickme" class="add-contributor"><img src="images/addButton.svg" alt=""></button>
                 </li>
                 <li>
                   <img src="images/jing.jpg" alt="">
@@ -51,42 +52,150 @@
             </div>
           </div>
         </nav>
-        <div class="sidebar">
-            <ul>
-              <li>
-                <img src="images/layers.svg" alt="">
-                Layers
-              </li>
-              <li>
-                <img src="images/menu.svg" alt="">
-                Layout
-              </li>
-              <li>
-                <img src="images/elements.svg" alt="">
-                Elements
-              </li>
-              <li>
-                <img src="images/images.svg" alt="">
-                Backgrounds
-              </li>
-              <li>
-                <img src="images/text.svg" alt="">
-                Text
-              </li>
-              <li>
-                <img src="images/upload.svg" alt="">
-                Uploads
-              </li>
-            </ul>
-            <div class="setting">
-              <img src="images/question.svg" alt="">
-              <img src="images/settings.svg" alt="">
-            </div>
+        <div id="add" class="contributors">
+          <h1>Collaborators</h1>
+          <ul>
+            <li>
+              <div class="profile">
+                <img src="images/katelyn.jpg" alt="">
+                <p>Katelyn</p>
+              </div>
+              <div class="control">
+                <p>can edit</p>
+                <img src="images/caret.svg" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="images/carol.jpg" alt="">
+                <p>Carol</p>
+              </div>
+              <div class="control">
+                <p>can edit</p>
+                <img src="images/caret.svg" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="images/wuyang.jpg" alt="">
+                <p>Wuyang</p>
+              </div>
+              <div class="control">
+                <p>can edit</p>
+                <img src="images/caret.svg" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="images/stu.jpg" alt="">
+                <p>Stu</p>
+              </div>
+              <div class="control">
+                <p>can edit</p>
+                <img src="images/caret.svg" alt="">
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="images/jing.jpg" alt="">
+                <p>Jing</p>
+              </div>
+              <div class="control">
+                <p>can edit</p>
+                <img src="images/caret.svg" alt="">
+              </div>
+            </li>
+          </ul>
+          <div class="invite">
+            <input type="text">
+            <button onclick="TogetherJS(this); return false;">Invite Collaborators</button>
+          </div>
         </div>
-        <button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
-    <div class="row">
+        <section class="main">
+          <div class="sidebar">
+              <ul>
+                <li>
+                  <img src="images/layers.svg" alt="">
+                  Layers
+                </li>
+                <li>
+                  <img src="images/menu.svg" alt="">
+                  Layout
+                </li>
+                <li>
+                  <img src="images/elements.svg" alt="">
+                  Elements
+                </li>
+                <li>
+                  <img src="images/images.svg" alt="">
+                  Backgrounds
+                </li>
+                <li>
+                  <img src="images/text.svg" alt="">
+                  Text
+                </li>
+                <li>
+                  <img src="images/upload.svg" alt="">
+                  Uploads
+                </li>
+              </ul>
+              <div class="setting">
+                <img src="images/question.svg" alt="">
+                <img src="images/settings.svg" alt="">
+              </div>
+          </div>
+          <div class="row">
+            <div class="multiproduct columns small-12 large-11">
+                <ul>
+                  <li>
+                    <button class="select">
+                      <img src="images/gift.svg" alt="">
+                    </button>
+                  </li>
+                  <li>
+                    <button class="select">
+                      <img src="images/cup.svg" alt="">
+                    </button>
+                  </li>
+                  <li>
+                    <button class="select">
+                      <img src="images/invite.svg" alt="">
+                    </button>
+                  </li>
+                  <li>
+                    <button class="select">
+                      <img src="images/hat.svg" alt="">
+                    </button>
+                  </li>
+                  <li>
+                    <button class="select">
+                      <img src="images/balloon.svg" alt="">
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/dot.svg" alt="">
+                    </button>
+                  </li>
+              </ul>
+              <div class="preview">
+                <button class="canvas">
+                  Canvas
+                </button>
+                <button class="products">
+                  Preview
+                </button>
+                <button class="ideas">
+                  <img src="images/chat.svg" alt="">
+                  Idea Canvas
+                </button>
+              </div>
 
-    </div>
+            </div>
+
+          </div>
+        </section>
+
   <script src="scripts.js"></script>
 </body>
 

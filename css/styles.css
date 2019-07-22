@@ -5,6 +5,11 @@ body {
   color: #333;
   margin: 0 auto;
   height: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
 }
 nav {
   display: flex;
@@ -13,6 +18,7 @@ nav {
   align-items: center;
   border-bottom: 1px solid #8A8A8A;
   padding: 12px 0;
+  flex: 0 0 auto;
 }
 nav .logo img {
   padding: 0 16px;
@@ -92,7 +98,8 @@ nav .nav-right ul li img {
 }
 .main {
   background-color: #F6F5F5;
-  height: 90%;
+  flex: 1 1 auto;
+  position: relative;
 }
 .sidebar {
   display: flex;
@@ -104,12 +111,13 @@ nav .nav-right ul li img {
   position: relative;
   z-index: 5;
   height: 100%;
+  justify-content: space-around;
 }
 .sidebar ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
   margin: 0;
   width: 100%;
@@ -149,9 +157,6 @@ svg:hover {
   margin-top: 16px;
 }
 .multiproduct {
-  position: absolute !important;
-  top: 81px;
-  right: 0;
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -160,6 +165,7 @@ svg:hover {
   border-bottom: 1px solid #8A8A8A;
   z-index: 0;
   padding-left: 40px !important;
+  flex: 0 0 auto;
 }
 .multiproduct ul {
   display: flex;
@@ -325,4 +331,58 @@ button {
 .contributors .invite button:hover {
   cursor: pointer;
   background-color: #0478FF;
+}
+.product-wrap {
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 40px;
+}
+.product-wrap ul {
+  height: 100%;
+  list-style-type: none;
+  display: inline-grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-template-rows: 50% 50%;
+  margin: 0;
+}
+.product-wrap ul.one-column {
+  grid-template-columns: 1fr;
+}
+.product-wrap ul.two-column {
+  grid-template-columns: 1fr 1fr;
+}
+.product-wrap ul.three-column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.product-wrap ul li {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.product-wrap ul img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: none;
+}
+.inviteCard {
+  display: none;
+}
+li.balloon .block {
+  width: 33%;
+}
+.content-wrapper {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 80px;
 }

@@ -342,8 +342,8 @@ button {
   list-style-type: none;
   display: inline-grid;
   grid-column-gap: 10px;
-  grid-row-gap: 15px;
-  grid-template-rows: 50% 50%;
+  grid-row-gap: 56px;
+  grid-template-rows: 45% 45%;
   margin: 0;
 }
 .product-wrap ul.one-column {

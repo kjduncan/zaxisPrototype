@@ -188,6 +188,9 @@ svg:hover {
   background-color: #D4D4D4;
   cursor: pointer;
 }
+.none {
+  display: none !important;
+}
 .active {
   background-color: #E1EFFF !important;
   border: 1px solid #E1EFFF !important;
@@ -385,4 +388,109 @@ li.balloon .block {
   width: 100%;
   height: 100%;
   padding-left: 80px;
+}
+.high-preview {
+  margin: 0;
+  height: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+  display: none;
+}
+.high-preview ul.high-fidelity {
+  list-style-type: none;
+  display: inline-grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 0;
+  flex-direction: row;
+  align-items: flex-start;
+  max-height: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 81px;
+  background-color: #F6F5F5;
+}
+.high-preview ul.high-fidelity li img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.spread-entry {
+  width: 320px;
+  height: 280px;
+  position: absolute;
+  right: 40px;
+  bottom: 24px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: .3s;
+  border-radius: 8px;
+}
+.spread-entry:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.spread-entry button.modal-open {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.spread-entry button.modal-open .solid-title {
+  background-color: #585858;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-radius: 4px 4px 0 0;
+}
+.spread-entry button.modal-open .solid-title h3 {
+  font-size: 18px;
+  color: #fff;
+  padding: 0 44px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+.spread-entry button.modal-open img {
+  border-radius: 0 0 4px 4px;
+}
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #414141;
+  z-index: 999;
+}
+.modal-content img {
+  object-fit: cover;
+  width: 70%;
+  position: abolute;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15%;
+  margin: 0;
+  top: 10%;
+}
+.close {
+  color: #fff;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 16px 24px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

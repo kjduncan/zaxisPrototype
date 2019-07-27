@@ -13,6 +13,12 @@ $("button.canvas").click(function(){
   $("button.products").removeClass("line");
 
 });
+$("button.products").click(function(){
+  $("div.high-preview").addClass("block");
+});
+$("button.canvas").click(function(){
+  $("div.high-preview").removeClass("block");
+});
 $( "#clickme" ).click(function () {
   if ( $( "div.contributors" ).is( ":hidden" ) ) {
     $( "div.contributors" ).slideDown( "slow" );
@@ -66,3 +72,23 @@ $("#balloonSelect").click(function(){
   $("li.balloon").toggleClass("block");
   isProductOpen($("li.balloon"));
 });
+
+
+
+var modal = document.getElementById("spreadModal");
+
+var btn = document.getElementById("modalGo");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

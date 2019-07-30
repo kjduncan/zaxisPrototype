@@ -46,16 +46,118 @@ $("button.canvas").click(function(){
 //     $( "div.layout" ).hide();
 //   }
 // });
+function navBarActive(){
+  var navButtonActive = false;
+  $(".sidebar-nav li").each(function(){
+    if($(this).hasClass("sidebar-active")){
+      navButtonActive = true;
+    };
+  })
+  return navButtonActive
+}
+function removeNavContent (){
+  $(".layout div").each(function(){
+    if($(this).hasClass("block")){
+      $(this).removeClass("block");
+    };
+  })
+}
+function removeNavBarActive() {
+  $(".sidebar-nav li").each(function(){
+    if($(this).hasClass("sidebar-active")){
+      console.warn($(this));
+      $(this).removeClass("sidebar-active");
+    };
+  })
+}
 $("#layout-open").click(function(){
+  if(!navBarActive()){
     $("div.layout").animate({
       width: "toggle"
     });
-    $(this).toggleClass("sidebar-active");
-  });
+    $(this).addClass("sidebar-active");
+    $("div.layout-selected").addClass("block");
+  } else if ($(this).hasClass("sidebar-active")) {
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).removeClass("sidebar-active");
+    $("div.layout-selected").removeClass("block");
+  } else if (navBarActive()) {
+    removeNavBarActive();
+    $(this).addClass("sidebar-active");
+  }
 
-$("#layout-open").click(function(){
-  $("div.layout-selected").toggleClass("block");
+  removeNavContent();
+  $("div.layout-content").addClass("block");
 });
+
+$("#element-open").click(function(){
+  if(!navBarActive()){
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).addClass("sidebar-active");
+    $("div.layout-selected").addClass("block");
+  } else if ($(this).hasClass("sidebar-active")) {
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).removeClass("sidebar-active");
+    $("div.layout-selected").removeClass("block");
+  } else if (navBarActive()) {
+    removeNavBarActive();
+    $(this).addClass("sidebar-active");
+  }
+
+  removeNavContent();
+  $("div.element-content").addClass("block");
+});
+
+$("#background-open").click(function(){
+  if(!navBarActive()){
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).addClass("sidebar-active");
+    $("div.layout-selected").addClass("block");
+  } else if ($(this).hasClass("sidebar-active")) {
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).removeClass("sidebar-active");
+    $("div.layout-selected").removeClass("block");
+  } else if (navBarActive()) {
+    removeNavBarActive();
+    $(this).addClass("sidebar-active");
+  }
+
+  removeNavContent();
+  $("div.background-content").addClass("block");
+});
+
+$("#font-open").click(function(){
+  if(!navBarActive()){
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).addClass("sidebar-active");
+    $("div.layout-selected").addClass("block");
+  } else if ($(this).hasClass("sidebar-active")) {
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).removeClass("sidebar-active");
+    $("div.layout-selected").removeClass("block");
+  } else if (navBarActive()) {
+    removeNavBarActive();
+    $(this).addClass("sidebar-active");
+  }
+
+  removeNavContent();
+  $("div.font-content").addClass("block");
+});
+
 
 var productsOpenCount = 0
 function isProductOpen($el){

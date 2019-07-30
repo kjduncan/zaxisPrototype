@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Title of the document</title>
+  <title>Maker Kits Prototype</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/pivotl.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -113,7 +113,7 @@
         </div>
         <section class="main">
           <div class="sidebar">
-              <ul>
+              <ul class="sidebar-nav">
                 <li>
                   <img src="images/layers.svg" alt="">
                   Layers
@@ -122,15 +122,15 @@
                   <img src="images/menu.svg" alt="">
                   Layout
                 </li>
-                <li>
+                <li id="element-open">
                   <img src="images/elements.svg" alt="">
                   Elements
                 </li>
-                <li>
+                <li id="background-open">
                   <img src="images/images.svg" alt="">
                   Backgrounds
                 </li>
-                <li>
+                <li id="font-open">
                   <img src="images/text.svg" alt="">
                   Text
                 </li>
@@ -145,19 +145,70 @@
               </div>
           </div>
           <div class="layout">
-            <div>
-              <h4>Layout</h4>
+            <div class="layout-content">
+              <div>
+                <h4>Layout</h4>
+              </div>
+              <div class="layout-group">
+                  <img src="images/Layout1.png" alt="">
+                  <img class="layout-image active-border" src="images/LayoutSelect.png" alt="">
+                  <img src="images/Layout2.png" alt="">
+                  <img src="images/Layout3.png" alt="">
+              </div>
             </div>
-            <div class="layout-group">
-                <img src="images/Layout1.png" alt="">
-                <img class="layout-image active-border" src="images/LayoutSelect.png" alt="">
-                <img src="images/Layout2.png" alt="">
-                <img src="images/Layout3.png" alt="">
+            <div class="element-content">
+              <div>
+                <h4>Elements</h4>
+              </div>
+              <div class="layout-group">
+                  <img src="images/bundleOne.png" alt="">
+                  <img src="images/bundleTwo.png" alt="">
+                  <img src="images/bundleThree.png" alt="">
+                  <img src="images/bundleFour.png" alt="">
+              </div>
+            </div>
+            <div class="background-content">
+              <div>
+                <h4>Background</h4>
+              </div>
+              <div class="layout-group">
+                  <img src="images/bkgOne.png" alt="">
+                  <img src="images/bkgTwo.png" alt="">
+                  <img src="images/bkgThree.png" alt="">
+                  <img src="images/bkgFour.png" alt="">
+                  <img src="images/bkgFive.png" alt="">
+                  <img src="images/bkgSix.png" alt="">
+                  <img src="images/bkgSeven.png" alt="">
+                  <img src="images/bkgEight.png" alt="">
+              </div>
+            </div>
+            <div class="font-content">
+              <div>
+                <h4>Text</h4>
+              </div>
+              <div class="layout-group">
+                <div class="text-selection">
+                  <p class="light">click to add text to your design</p>
+                  <h2>Add a heading text </h2>
+                  <h3>Add a subheading text </h3>
+                  <p>Add some body text</p>
+                </div>
+                  <h4>Templates</h4>
+                <div class="text-img">
+                  <img src="images/typeOne.png" alt="">
+                  <img src="images/typeTwo.png" alt="">
+                  <img src="images/typeThree.png" alt="">
+                  <img src="images/typeFour.png" alt="">
+                  <img src="images/typeFive.png" alt="">
+                </div>
+              </div>
             </div>
           </div>
           <div class="layout-selected">
             <img src="images/canvas.png" alt="">
           </div>
+
+
           <div class="content-wrapper">
               <div class="multiproduct">
                   <ul>

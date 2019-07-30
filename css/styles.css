@@ -150,17 +150,34 @@ svg:hover {
   background-color: #2F8DFA;
   color: #fff;
 }
+.layout-content {
+  display: none;
+  overflow: auto;
+}
+.element-content {
+  display: none;
+  overflow: auto;
+}
+.background-content {
+  display: none;
+  overflow: auto;
+}
+.font-content {
+  display: none;
+  overflow: auto;
+}
 .layout {
   position: absolute;
   width: 436px;
   top: 10%;
-  left: 7%;
+  left: 104px;
   background-color: #fff;
   padding: 32px 32px;
   height: 100%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   z-index: 992;
   display: none;
+  overflow: auto;
 }
 .layout-group {
   display: flex;
@@ -189,6 +206,26 @@ svg:hover {
 }
 .layout-selected img {
   width: 400px;
+}
+.text-selection {
+  border-top: 2px solid #E5E5E5;
+  border-bottom: 2px solid #E5E5E5;
+  padding: 16px;
+}
+p.light {
+  color: #C5C5C5;
+  font-size: 12px;
+}
+.layout h4 {
+  padding: 24px 0;
+}
+.text-img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.text-img img {
+  width: 50%;
 }
 .setting {
   display: flex;

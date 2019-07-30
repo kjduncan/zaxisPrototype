@@ -106,10 +106,10 @@ nav .nav-right ul li img {
   flex-direction: column;
   border-right: 1px solid #8A8A8A;
   align-items: flex-start;
-  width: 80px;
+  width: 104px;
   background-color: #fff;
   position: relative;
-  z-index: 5;
+  z-index: 999;
   height: 100%;
   justify-content: space-around;
 }
@@ -130,6 +130,7 @@ nav .nav-right ul li img {
   font-size: 12px;
   width: 100%;
   padding: 8px 0;
+  height: 100%;
 }
 .sidebar li:hover {
   background-color: #2F8DFA;
@@ -144,6 +145,50 @@ svg:hover {
 }
 .sidebar ul li img {
   width: 30px;
+}
+.sidebar-active {
+  background-color: #2F8DFA;
+  color: #fff;
+}
+.layout {
+  position: absolute;
+  width: 436px;
+  top: 10%;
+  left: 7%;
+  background-color: #fff;
+  padding: 32px 32px;
+  height: 100%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: 992;
+  display: none;
+}
+.layout-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.layout-group img {
+  width: 50%;
+  padding: 16px;
+  border: 4px solid transparent;
+  transition: .3s;
+}
+.layout-group img.layout-image:hover {
+  border: 4px solid #676767;
+  cursor: pointer;
+}
+.active-border {
+  background-color: #676767 !important;
+}
+
+.layout-selected {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  display: none;
+}
+.layout-selected img {
+  width: 400px;
 }
 .setting {
   display: flex;
@@ -163,7 +208,7 @@ svg:hover {
   justify-content: space-between;
   padding-right: 24px;
   border-bottom: 1px solid #8A8A8A;
-  z-index: 0;
+  z-index: 998;
   padding-left: 40px !important;
   flex: 0 0 auto;
 }
@@ -339,6 +384,8 @@ button {
   flex: 1 1 auto;
   overflow: hidden;
   padding: 40px;
+  align-self: flex-end;
+  width: 64%;
 }
 .product-wrap ul {
   height: 100%;
@@ -348,6 +395,8 @@ button {
   grid-row-gap: 56px;
   grid-template-rows: 45% 45%;
   margin: 0;
+  background-color: #F6F5F5;
+  padding: 40px;
 }
 .product-wrap ul.one-column {
   grid-template-columns: 1fr;
@@ -405,7 +454,7 @@ li.balloon .block {
   flex-direction: row;
   align-items: flex-start;
   max-height: 100%;
-  margin: 0;
+  margin-left: 16px;
   flex-wrap: wrap;
   position: absolute;
   top: 81px;
@@ -454,7 +503,9 @@ li.balloon .block {
 .spread-entry button.modal-open img {
   border-radius: 0 0 4px 4px;
 }
-
+.hidden {
+  display: none !important;
+}
 
 
 .modal {
@@ -478,7 +529,7 @@ li.balloon .block {
   bottom: 0;
   left: 15%;
   margin: 0;
-  top: 10%;
+  top: 20%;
 }
 .close {
   color: #fff;

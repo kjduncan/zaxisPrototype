@@ -19,13 +19,44 @@ $("button.products").click(function(){
 $("button.canvas").click(function(){
   $("div.high-preview").removeClass("block");
 });
-$( "#clickme" ).click(function () {
+$( "#contribute-open" ).click(function () {
   if ( $( "div.contributors" ).is( ":hidden" ) ) {
     $( "div.contributors" ).slideDown( "slow" );
   } else {
     $( "div.contributors" ).hide();
   }
 });
+
+$("button.products").click(function(){
+  $("div.layout").addClass("hidden");
+  $("#layout-open").removeClass("sidebar-active");
+});
+$("button.canvas").click(function(){
+  $("div.layout").removeClass("hidden");
+  $("#layout-open").addClass("sidebar-active")
+});
+// $("img.layout-image").click(function(){
+//   $(this).toggleClass("active-border");
+// });
+
+// $( "#layout-open" ).click(function () {
+//   if ( $( "div.layout" ).is( ":hidden" ) ) {
+//     $( "div.layout" ).slideToggle("slow");
+//   } else {
+//     $( "div.layout" ).hide();
+//   }
+// });
+$("#layout-open").click(function(){
+    $("div.layout").animate({
+      width: "toggle"
+    });
+    $(this).toggleClass("sidebar-active");
+  });
+
+$("#layout-open").click(function(){
+  $("div.layout-selected").toggleClass("block");
+});
+
 var productsOpenCount = 0
 function isProductOpen($el){
   if ($el.hasClass("block")) {
@@ -34,7 +65,6 @@ function isProductOpen($el){
   else {
     productsOpenCount -= 1
   }
-  console.log(productsOpenCount);
   if (productsOpenCount === 1) {
     $("#products").removeClass("two-column");
     $("#products").removeClass("three-column");

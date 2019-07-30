@@ -27,14 +27,14 @@ $( "#contribute-open" ).click(function () {
   }
 });
 
-$("button.products").click(function(){
-  $("div.layout").addClass("hidden");
-  $("#layout-open").removeClass("sidebar-active");
-});
-$("button.canvas").click(function(){
-  $("div.layout").removeClass("hidden");
-  $("#layout-open").addClass("sidebar-active")
-});
+// $("button.products").click(function(){
+//   $("div.layout").addClass("hidden");
+//   $("#layout-open").removeClass("sidebar-active");
+// });
+// $("button.canvas").click(function(){
+//   $("div.layout").removeClass("hidden");
+//   $("#layout-open").addClass("sidebar-active")
+// });
 // $("img.layout-image").click(function(){
 //   $(this).toggleClass("active-border");
 // });

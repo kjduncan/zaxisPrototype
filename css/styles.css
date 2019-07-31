@@ -422,7 +422,11 @@ button {
   overflow: hidden;
   padding: 40px;
   align-self: flex-end;
-  width: 64%;
+  width: 100%;
+  transition: width .3s;
+}
+.product-wrap.nav-open {
+  width: calc(100% - 430px);
 }
 .product-wrap ul {
   height: 100%;

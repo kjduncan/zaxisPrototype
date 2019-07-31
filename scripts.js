@@ -6,7 +6,7 @@ $("button.select").click(function(){
 $("button.products").click(function(){
   $(this).addClass("line");
   $("button.canvas").removeClass("line");
-
+  $(".sidebar-active").trigger( "click" );
 });
 $("button.canvas").click(function(){
   $(this).addClass("line");
@@ -53,6 +53,11 @@ function navBarActive(){
       navButtonActive = true;
     };
   })
+  // if (navButtonActive) {
+  //   $('.product-wrap').addClass('nav-open');
+  // } else {
+  //   $('.product-wrap').removeClass('nav-open');
+  // }
   return navButtonActive
 }
 function removeNavContent (){
@@ -65,7 +70,6 @@ function removeNavContent (){
 function removeNavBarActive() {
   $(".sidebar-nav li").each(function(){
     if($(this).hasClass("sidebar-active")){
-      console.warn($(this));
       $(this).removeClass("sidebar-active");
     };
   })
@@ -76,12 +80,14 @@ $("#layout-open").click(function(){
       width: "toggle"
     });
     $(this).addClass("sidebar-active");
+    $('.product-wrap').addClass('nav-open');
     $("div.layout-selected").addClass("block");
   } else if ($(this).hasClass("sidebar-active")) {
     $("div.layout").animate({
       width: "toggle"
     });
     $(this).removeClass("sidebar-active");
+    $('.product-wrap').removeClass('nav-open');
     $("div.layout-selected").removeClass("block");
   } else if (navBarActive()) {
     removeNavBarActive();
@@ -98,12 +104,14 @@ $("#element-open").click(function(){
       width: "toggle"
     });
     $(this).addClass("sidebar-active");
+    $('.product-wrap').addClass('nav-open');
     $("div.layout-selected").addClass("block");
   } else if ($(this).hasClass("sidebar-active")) {
     $("div.layout").animate({
       width: "toggle"
     });
     $(this).removeClass("sidebar-active");
+    $('.product-wrap').removeClass('nav-open');
     $("div.layout-selected").removeClass("block");
   } else if (navBarActive()) {
     removeNavBarActive();
@@ -120,12 +128,14 @@ $("#background-open").click(function(){
       width: "toggle"
     });
     $(this).addClass("sidebar-active");
+    $('.product-wrap').addClass('nav-open');
     $("div.layout-selected").addClass("block");
   } else if ($(this).hasClass("sidebar-active")) {
     $("div.layout").animate({
       width: "toggle"
     });
     $(this).removeClass("sidebar-active");
+    $('.product-wrap').removeClass('nav-open');
     $("div.layout-selected").removeClass("block");
   } else if (navBarActive()) {
     removeNavBarActive();
@@ -142,12 +152,14 @@ $("#font-open").click(function(){
       width: "toggle"
     });
     $(this).addClass("sidebar-active");
+    $('.product-wrap').addClass('nav-open');
     $("div.layout-selected").addClass("block");
   } else if ($(this).hasClass("sidebar-active")) {
     $("div.layout").animate({
       width: "toggle"
     });
     $(this).removeClass("sidebar-active");
+    $('.product-wrap').removeClass('nav-open');
     $("div.layout-selected").removeClass("block");
   } else if (navBarActive()) {
     removeNavBarActive();
